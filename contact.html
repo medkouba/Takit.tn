@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style25.css" > 
+        <link rel="stylesheet" href="style.css" >
+        <title>nous contacter</title>
+    </head>
+    <body>
+      <header>
+        <nav>
+            <div class="logo">
+                <h1>TaKit<span class="tn_logo">.tn</span></h1>
+            </div>
+            <div class="search">
+                <input type="text">
+                <input type="button" value="search">
+            </div>
+            <div class="cart">
+                <i class="fas fa-shopping-cart"></i>
+                <span>50</span>
+            </div>
+        </nav>
+    </header>
+    <div class="main__navigations">
+        <div class="main__navigations__div">
+            <ul class="main__navigations__div__ul">
+                <li class="main__navigations__div__li " style="font-weight: bold;"><a class="ha" href="index.html">Home</a></li>
+                <li class="main__navigations__div__li on__mobile_d_none">
+                    <a class="categ ha" style="font-weight: bold;">Categories <i class="fas fa-caret-down"></i></a>
+                    <div class="div__categories__items">
+                        <p><a href="">Hommes</a></p>
+                        <p><a href="">Femmes</a></p>
+                        <p><a href="">Lunettes</a></p>
+                        <p><a href="">Espadrilles</a></p>
+                        <p><a href="">chaussures</a></p>
+                        <p><a href="">chapeaux</a></p>
+                    </div>
+                </li>
+                <li class="main__navigations__div__li save__from__left on__mobile_d_none">
+                    <a href="" class="anchor__remains__same ha" style="font-weight: bold;">
+                        A propos</a></li>
+                <li class="main__navigations__div__li save__from__left">
+                            <a href="contact.html" class="anchor__remains__same ha" style="font-weight: bold; color: #3498db;">
+                                Nous Cantacter</a></li>
+                <li class="main__navigations__div__li">
+                    <a href="" class="anchor__remains__same ha" style="padding-bottom: 0;font-weight: bold;">
+                        Logout <i class="fas fa-sign-out-alt"></i> </a>
+                </li>
+                <div class="bars save__from__right">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </ul>
+
+        </div>
+    </div>
+
+    <div class="mobile__nav__fade__and__show">
+        <div class="mobile__nav__fade__and__show__text">
+            <li><a href="">Home</a></li>
+            <li>
+                <a href="">Categories</a>
+                <div>
+                        <p><a href="">Hommes</a></p>
+                        <p><a href="">Femmes</a></p>
+                        <p><a href="">Lunettes</a></p>
+                        <p><a href="">Espadrilles</a></p>
+                        <p><a href="">chaussures</a></p>
+                        <p><a href="">chapeaux</a></p>
+                </div>
+            </li>
+        </div>
+    </div>
+    <div class="mobile__nav__fade__and__show__circle"></div>
+      <script src="https://kit.fontawesome.com/3b1ca000cb.js"></script> 
+        <div class="englobe">
+            <div class="title">
+                 Contacter nous!
+            </div>
+            <form action="traitement.php" onsubmit="pop_up()" >
+            
+                <div class="inputfield">
+                    <label for="nom_client" ><em >Nom</em ></label  >
+                    <input type="text" id="nom_client" name="nom_client" required onkeyup="upp_first_letter()" >
+                </div>  
+                <div class="inputfield">
+                    <label for="prenom_client" ><em >Prenom</em ></label  >
+                    <input type="text" id="prenom_client" name="prenom_client" required onkeyup="upp_first_letter()" >
+                </div>      
+                <div class="inputfield">    
+                    <label for="email_client"><em>email</em></label>
+                    <input type="text" id="email_client" name="email_client" required >
+                </div>   
+                <div class="inputfield">   
+                    <label for="numerotel_client"> <em>numero de telephone</em></label>
+                    <input type="tel" id="numerotel_client" name="numerotel_client"  onblur="verif()">
+                    <p id="note"></p>
+                </div>    
+                <div class="inputfield">   
+                    <label for="code_commande"><em>code de commande</em></label>
+                    <input type="text" id="code_commande" name="code_commande" >
+                </div>    
+                <div class="inputfield">   
+                    <label for="votremessage"><em>votre message</em></label>
+                    <br>
+                    <textarea name="message" id="message" rows="5" cols="30"></textarea>
+                </div>
+                
+                <div class="boutton">
+                    <input type="submit" value="Envoyer" >
+                </div>
+                
+            </form>
+        </div>
+        <script>
+            function upp_first_letter()
+            {
+              var x=document.getElementById("nom_client");
+              x.value=x.value.slice(0,1).toUpperCase()+x.value.slice(1);
+              var x=document.getElementById("prenom_client");
+              x.value=x.value.slice(0,1).toUpperCase()+x.value.slice(1);
+            }
+            function verif()
+            {
+                var x=document.getElementById("numerotel_client");
+                var ch= x.value.toString();
+                if (ch.length!=8){
+                    document.getElementById("note").innerHTML="ce numero doit contenir 8 chiffre";
+                    document.getElementById("note").style.color="red";
+                }
+                else document.getElementById("note").innerHTML="";
+
+            }
+            function pop_up(){
+                alert('votre demande a ete envoyer');
+            }
+        </script>
+        <br> <br> <br> <br>
+
+        <div class="footer">
+                <div class="inner-footer">
+              
+              <!--  for company name and description -->
+                  <div class="footer-items">
+                    <h1 style="color: #908f8c;">TaKit<span class="tn_logo">.tn</span></h1>
+                    <p>La meilleure plateforme eCommerce en Tunisie</p>
+                  </div>
+              
+              <!--  for quick links  -->
+                  <div class="footer-items">
+                    <h3 class="color-w">Liens utiles</h3>
+                    <div class="border1"></div> <!--for the underline -->
+                      <ul>
+                        <a href="#"><li>Accueil</li></a>
+                        <a href="#"><li>A propos</li></a>
+                        <a href="#"><li>Services</li></a>
+                        <a href="#"><li>rechercher</li></a>
+                      </ul>
+                  </div>
+              
+              <!--  for some other links -->
+                  <div class="footer-items">
+                    <h3 class="color-w">Produits</h3>
+                    <div class="border1"></div>  <!--for the underline -->
+                      <ul>
+                        <a href="#"><li>Notre collection</li></a>
+                        <a href="#"><li>Promotion</li></a>
+                        <a href="#"><li>Nouveaux produits</li></a>
+                        <a href="#"><li>Meilleurs ventes</li></a>
+                      </ul>
+                  </div>
+              
+              <!--  for contact us info -->
+                  <div class="footer-items">
+                    <h3 class="color-w">Contact us</h3>
+                    <div class="border1"></div>
+                      <ul>
+                        <li><i class="fa fa-map-marker" aria-hidden="true"></i>Rue 455, 13 Août-Archimède, S1 Poudrière 1
+                            3002 Sfax-Tunisie </li>
+                        <br>
+                        <li><i class="fa fa-phone" aria-hidden="true"></i>12345678</li>
+                        <li><i class="fa fa-envelope" aria-hidden="true"></i>Client@Takit-Fashion.tn</li>
+                      </ul> 
+                    
+              <!--   for social links -->
+                      <div class="social-media">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-google-plus-square"></i></a>
+                      </div> 
+                  </div>
+                </div>
+                
+              <!--   Footer Bottom start  -->
+                <div class="footer-bottom">
+                  <p>Copyright &copy; TaKit.tn 2021.</p>
+                </div>
+              </div>
+       
+    </body>
+</html>
